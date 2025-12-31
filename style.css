@@ -221,6 +221,10 @@ header button:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.service_text h2{
+    color: #eb9b34;
+}
+
 .services_card{
     width: 80%;
     height: 65vh;
@@ -275,6 +279,9 @@ header button:hover{
     flex-direction: column;
     gap: 60px;
 
+}
+.about_me h1{
+    color: #eb9b34;
 }
 .about_me .about_text{
     text-align: center;
@@ -1095,6 +1102,11 @@ ul {
 
         height: fit-content;
      }
+     .contact_2-1 input{
+        height: 40px;
+        font-size: 16px;
+     }
+
     .contact_2{
         flex-direction: column;
     }
