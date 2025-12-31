@@ -966,6 +966,7 @@ ul {
     /* hide checkbox */
 #toggle {
     display: none;
+
 }
 
 /* hamburger button */
@@ -1030,6 +1031,12 @@ ul {
     display: flex;
 }
 
+.menu-btn{
+    position: absolute;
+    top: 4px;
+    left: 10px;
+}
+
     .hero_section{
         flex-direction: column;
         height: fit-content;
@@ -1037,13 +1044,14 @@ ul {
     .hero_section .intro{
         width: 100%;
         /* text-align: center; */
-        padding: 50px;
+        padding: 20px;
     }
     .intro .social{
         width: 50%;
     }
     .client{
-        width: fit-content;
+        width: 100%;
+        
     }
 
     .piclogo{
