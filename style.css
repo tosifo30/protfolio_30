@@ -896,7 +896,7 @@ ul {
   width: 100%;
   height: 0;
   background-color: #000;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
 }
 .example-2 .icon-content a:hover .filled {
   height: 100%;
@@ -1102,8 +1102,15 @@ ul {
     width: 100%;
     grid-template-columns: 1fr;
     }
+    .main_card{
+        width: 100%;
+    }
      .project{
+        width: 100%;
         height: fit-content;
+     }
+     .project-2{
+        width: 100%;
      }
      .contact{
         width: 100%;
