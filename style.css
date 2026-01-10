@@ -249,6 +249,8 @@ header button:hover{
     border-radius: 10px;
     background-color: rgb(37, 37, 37);
     transition: all;
+    transition: 1s ease;
+
     
 }
 .services_card img{
@@ -263,7 +265,6 @@ header button:hover{
 }
 .services_card .cards:hover{
     transform: translateY(-10px);
-    transition-duration: 1s;
     box-shadow: 0 0 10px #eb9b34;
 }
 
