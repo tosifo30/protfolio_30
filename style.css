@@ -126,6 +126,7 @@ header button:hover{
     transform: scale(1.1);
 }
 .hero_section h1{
+
     font-size: 55px;
     font-family: "Oswald", sans-serif;
     
@@ -134,9 +135,30 @@ header button:hover{
 .hero_section h4{
     color: aliceblue;
 }
-.hero_section h2{
-    color: aliceblue;
+.tauseef{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient( 45deg,
+    #2e416e,
+    #c6ae86
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+.develpor{
+    background: linear-gradient(45deg,
+    #eb9b34,
+    #c6ae86,
+    #eb9b34,
+    #eb9b34
+    ) ;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .btn{
     display: flex;
     gap: 10px;
@@ -151,6 +173,11 @@ header button:hover{
     border-radius: 7px;
     margin-top: 20px;
 
+}
+.cv a{
+    text-decoration: none;
+    color: white;
+    
 }
 
 
