@@ -168,7 +168,12 @@ header button:hover{
     color: aliceblue;
     border: 1px solid white;
     background-color: transparent;
-    /* background-color: #FD6F00; */
+    /* background-color: -10px 10px 10px white,
+        -15px 10px 15px white,
+        -25px 25px 30px #de16b3,
+        -30px 30px 40px #de16b3,
+        -35px 35px 50px #de16b3,
+        -40px 40px 50px #de16b3; */
     /* background-image: linear-gradient(to bottom #E46400 #FD6F00); */
     border-radius: 7px;
     margin-top: 20px;
@@ -990,6 +995,11 @@ ul {
         display: none;
     }
 
+    header{
+        height: 60px;
+        border: 1px solid white;
+    }
+
     /* toogle */
     /* hide checkbox */
 #toggle {
@@ -1004,47 +1014,42 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     cursor: pointer;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 
 
 
 .menu {
-    width: 45%;
-    height: 250px;
-    background-color: rgb(54, 53, 53);
-    display: none;
+    width: 100%;
+    text-align: center;
+    height: 210px;
     border-radius: 10px;
     flex-direction: column;
-    margin-top: 10px;
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    padding: 15px;
+    padding: 8px;
+    transition:  1s ease;
     
-
+}
+/* toggle menu */
+#toggle:checked + .menu-btn + .menu {
+    display: flex;
 }
 .menu nav{
  padding: 7px 20px;
- /* margin-top: 10px; */
 }
 .menu nav a{
     text-decoration: none;
     color: #eb9b34;
-    /* padding: 10px 20px; */
     font-size: 20px;
     
 }
 .menu nav:hover{
     background-color: #444444;
-    color: white;
     border-radius: 5px;
 }
-
-
 
 .cross{
     font-size: 30px;
@@ -1054,10 +1059,6 @@ ul {
 }
 
 
-/* toggle menu */
-#toggle:checked + .menu-btn + .menu {
-    display: flex;
-}
 
 .menu-btn{
     position: absolute;
