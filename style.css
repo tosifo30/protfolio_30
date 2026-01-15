@@ -32,6 +32,10 @@ html {
     }
     }
 
+    @keyframes typing{
+        from{width: 0ch;}
+    }
+
 body{
     background-color: rgb(12, 10, 10);
 }
@@ -44,7 +48,6 @@ header{
     height: 100px;
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
 }
 
 /* toogle */
@@ -83,7 +86,6 @@ header .nav a{
 header button{
     padding: 7px 30px;
     color: aliceblue;
-    /* background-image: linear-gradient(to bottom #E46400 #FD6F00); */
     border-radius: 7px;
     margin-top: 20px;
 
@@ -138,22 +140,24 @@ header button:hover{
 .tauseef{
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient( 45deg,
-    #2e416e,
-    #c6ae86
+    background: linear-gradient( 15deg,
+    #a46410,
+    #30302f,
+    #30302f
     );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .develpor{
+    width: 40ch;
     background: linear-gradient(45deg,
     #eb9b34,
     #c6ae86,
     #eb9b34,
     #eb9b34
     ) ;
-    background-size: cover;
+    animation: typing 2s steps(20);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -168,13 +172,6 @@ header button:hover{
     color: aliceblue;
     border: 1px solid white;
     background-color: transparent;
-    /* background-color: -10px 10px 10px white,
-        -15px 10px 15px white,
-        -25px 25px 30px #de16b3,
-        -30px 30px 40px #de16b3,
-        -35px 35px 50px #de16b3,
-        -40px 40px 50px #de16b3; */
-    /* background-image: linear-gradient(to bottom #E46400 #FD6F00); */
     border-radius: 7px;
     margin-top: 20px;
 
@@ -221,7 +218,7 @@ header button:hover{
     height: 60vh;
      background-color: rgb(26, 26, 26);
     border: 1px solid #eb9b34;
-    box-shadow: 0 0 10px #eb9b34;
+    box-shadow: 0 0 10px 3px #eb9b34;
     position: relative;
     border-radius: 47% 47% 5% 0% / 57% 54% 0% 10% ;
     margin-bottom: 10%;
@@ -229,16 +226,14 @@ header button:hover{
 .piclogo img{
     width: 80%;
     height: 110%;
-    /* margin: auto; */
     position: absolute;
     bottom: 0px;
     left: 30px;
+    transition: 1s ease;
 }
 .piclogo img:hover{
     transform: translateY(-10px);
-    /* box-shadow: 0 0 10px #FA6E00; */
-    transition-duration: 1s;
-
+    filter: drop-shadow(0 0 10px #eb9b34);
 }
 
 /* Servicer */
@@ -263,7 +258,6 @@ header button:hover{
     margin: auto;
     margin-top: 40px;
     padding: 20px;
-    /* border: 1px solid white; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
@@ -272,9 +266,7 @@ header button:hover{
 }
 
 .services_card .cards{
-    /* width: 28%; */
     height: 200px;
-    /* border: 1px solid white; */
     color: #fafaf9;
     text-align: center;
     padding: 10px;
@@ -296,9 +288,15 @@ header button:hover{
  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .services_card .cards:hover{
-    transform: translateY(-10px);
+    transform: translate(8px, -7px);
     box-shadow: 0 0 10px #eb9b34;
 }
+ 
+.services_card:hover .cards:not(:hover){
+    filter: blur(6px);
+    transform: scale(0.9);
+}
+
 
 
 /* hero senction end */
@@ -311,6 +309,7 @@ header button:hover{
     display: flex;
     flex-direction: column;
     gap: 60px;
+    padding: 60px;
 
 }
 .about_me h1{
@@ -326,7 +325,6 @@ header button:hover{
 }
 .about_img{
       display: flex;
-      /* width: 40%; */
       justify-content: space-around;
 
 }
@@ -351,25 +349,24 @@ header button:hover{
     left: 30px;
     margin-top: 80px;
     border-radius: 30%;
+    transition : 1s ease;
       
 }
 
 .about_me-text{
     width: 40%;
     color: #646463;
+    transition : 1s ease;
 }
 .about_me-text:hover{
-    transition-duration: 1s;
     color: #Ffff;
 }
 
 .about_img button{
      padding: 7px 40px;
     color: aliceblue;
-    /* border: 1px solid white; */
     background-color: transparent;
     background-color: #eb9b34;
-    /* background-image: linear-gradient(to bottom #E46400 #FD6F00); */
     border-radius: 7px;
     margin-top: 20px;
     display: flex;
@@ -380,10 +377,10 @@ header button:hover{
     color: #fafaf9;
 }
 
+
 .about_img img:hover{
-    transition-duration: 1s;
     transform: scale(1.04);
-    /* box-shadow: 0 0 10px #FA6E00; */
+    filter: drop-shadow(0 0 10px #eb9b34);
 }
 
 
@@ -404,11 +401,9 @@ header button:hover{
 .about_cercle .circle{
     width: 100px;
     height: 100px;
-    /* border: ipx solid white; */
     background-image: url(images/cir.png);
     background-size:cover ;
     text-align: center;
-    /* align-self: center; */
     padding: 30px 20px;
     transition: all;
  
@@ -420,68 +415,63 @@ header button:hover{
 
 }
 .circle1:hover{
-    transition-duration: 1s;
     transform: scale(1.04);
     box-shadow: 0 0 10px #f1f1f0;
 }
 .about_cercle .circle1{
     width: 100px;
     height: 100px;
-    /* border: ipx solid white; */
     background-image: url(images/cir.png);
     background-size:cover ;
     text-align: center;
-    /* align-self: center; */
     padding: 30px 20px;
      border-radius: 50%;
+         transition: 1s ease;
+
 }
 .circle2:hover{
-    transition-duration: 1s;
     transform: scale(1.04);
     box-shadow: 0 0 10px #Ffff;
 }
 .about_cercle .circle2{
     width: 100px;
     height: 100px;
-    /* border: ipx solid white; */
     background-image: url(images/cir.png);
     background-size:cover ;
     text-align: center;
-    /* align-self: center; */
     padding: 30px 20px;
     border-radius: 50%;
+        transition: 1s ease;
+
 }
 .circle3:hover{
-    transition-duration: 1s;
     transform: scale(1.04);
     box-shadow: 0 0 10px #f2f1f1;
 }
 .about_cercle .circle3{
     width: 100px;
     height: 100px;
-    /* border: ipx solid white; */
     background-image: url(images/cir.png);
     background-size:cover ;
     text-align: center;
-    /* align-self: center; */
     padding: 30px 20px;
     border-radius: 50%;
+        transition: 1s ease;
+
 }
 .about_cercle .circle4{
     width: 100px;
     height: 100px;
-    /* border: ipx solid white; */
     background-image: url(images/cir.png);
     background-size:cover ;
     text-align: center;
-    /* align-self: center; */
     padding: 30px 20px;
     border-radius: 50%;
     background-color: #3b3b38;
+    transition: 1s ease;
 }
 
 .about_cercle .circle4:hover{
-    transition-duration: 1s;
     transform: scale(1.04);
     box-shadow: 0 0 10px #f4f0ee;
 }
@@ -495,7 +485,6 @@ header button:hover{
 .project{
     width: 100%;
     height: 100vh;
-    /* margin-top: 70px; */
     padding: 30px;
 }
 
@@ -510,7 +499,6 @@ header button:hover{
 .project-1 a{
     text-decoration: none;
     color: white;
-    /* display: inline-block; */
 }
 
 .project-1 nav{
@@ -533,9 +521,7 @@ header button:hover{
     gap: 20px;
       margin: auto;
     margin-top: 40px;
-  
-    /* margin: auto; */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* project cards */
@@ -553,14 +539,12 @@ header button:hover{
     row-gap: 60px;
 }
 .main_card{
-    /* width: 2%; */
     height: 30vh;
    
 }
 /* card 1s */
 
 .card_1 {
-    /* width: 100%; */
     height: 100%;
     border: 1px solid white;
     background-image: url(images/p1.png);
@@ -662,7 +646,6 @@ header button:hover{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid white; */
     gap: 30px;
     align-items: center;
     padding: 40px;
@@ -670,7 +653,6 @@ header button:hover{
 
 .contact_text{
     width: 100%;
-    /* border: 1px solid white; */
     color: #f2f1f1;
     text-align: center;
 }
@@ -787,16 +769,14 @@ header button:hover{
 
 .contact_2{
     width: 55%;
-    /* border: 1px solid white; */
     display: flex;
     gap: 30px;
     justify-content: space-between;
     padding: 20px;
 }
 
-/* input 1 */
+/* form 1 */
 
-/* From Uiverse.io by Jaareet */ 
 .input {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   font-weight: 500;
@@ -833,7 +813,6 @@ footer{
     clear: both;
     width: 100%;
     height: 50vh;
-    /* border: 1px solid white; */
 
 }
 
@@ -1000,7 +979,6 @@ ul {
     }
 
     /* toogle */
-    /* hide checkbox */
 #toggle {
     display: none;
 
@@ -1029,6 +1007,7 @@ ul {
     flex-direction: column;
     padding: 8px;
     transition:  1s ease;
+    animation: my 1.5s ease;
     
 }
 /* toggle menu */
@@ -1070,7 +1049,6 @@ ul {
     }
     .hero_section .intro{
         width: 100%;
-        /* text-align: center; */
         padding: 20px;
     }
     .intro .social{
@@ -1090,11 +1068,15 @@ ul {
         grid-template-columns: 1fr;
     }
     .about_me{
+        width: 100%;
         height: fit-content;
+        padding: 20px;
     }
     .about_me .about_img{
         flex-direction: column;
         height: fit-content;
+        flex-direction: column-reverse;
+        gap: 40px;
     }
 
     .about_img .imgs{
@@ -1104,7 +1086,6 @@ ul {
     }
     .about_me-text{
         width: 100%;
-        /* text-align: center; */
         margin-top: 30px;
     }
     .services_card{
