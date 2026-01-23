@@ -23,7 +23,7 @@ html {
     }
 @keyframes work{
     from{
-        transform: translatex(-60px);
+        transform: translatex(-80px);
         opacity: .3;
     }
     to{
@@ -35,6 +35,8 @@ html {
     @keyframes typing{
         from{width: 0ch;}
     }
+
+  
 
 body{
     background-color: rgb(12, 10, 10);
@@ -88,6 +90,7 @@ header button{
     color: aliceblue;
     border-radius: 7px;
     margin-top: 20px;
+    transition: 1s ease
 
 }
 header button:hover{
@@ -109,8 +112,8 @@ header button:hover{
     display: flex;
     flex-direction: column;
     gap: 10px;
-     margin-bottom: 10%;
-     animation-name: my;
+    margin-bottom: 10%;
+    animation-name: my;
     animation-duration: 2s;
 
 }
@@ -142,8 +145,8 @@ header button:hover{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: linear-gradient( 15deg,
     #a46410,
-    #30302f,
-    #30302f
+    #ad900d,
+    #c69008
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -153,11 +156,11 @@ header button:hover{
     width: 40ch;
     background: linear-gradient(45deg,
     #eb9b34,
-    #c6ae86,
+    #895a07,
     #eb9b34,
     #eb9b34
     ) ;
-    animation: typing 2s steps(20);
+    animation: typing 3s alternate;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -261,6 +264,8 @@ header button:hover{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    animation-timeline: view();
+    animation-range: entry 0% cover 80%;
     animation-name: work;
     animation-duration: 2s;
 }
@@ -326,6 +331,10 @@ header button:hover{
 .about_img{
       display: flex;
       justify-content: space-around;
+      animation-timeline: view();
+    animation-range: entry 0% cover 80%;
+    animation-name: work;
+    animation-duration: 2s;
 
 }
 
@@ -387,98 +396,6 @@ header button:hover{
 
 
 /* Circle */
-
-.about_cercle{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    height: fit-content;
-    width: 80%;
-    gap: 40px;
-    margin: auto;
-    
-}
-
-.about_cercle .circle{
-    width: 100px;
-    height: 100px;
-    background-image: url(images/cir.png);
-    background-size:cover ;
-    text-align: center;
-    padding: 30px 20px;
-    transition: all;
- 
-}
-.main-circle h1{
-    color: #eb9b34;
-    padding-left:15px ;
-    margin-top: 10px;
-
-}
-.circle1:hover{
-    transform: scale(1.04);
-    box-shadow: 0 0 10px #f1f1f0;
-}
-.about_cercle .circle1{
-    width: 100px;
-    height: 100px;
-    background-image: url(images/cir.png);
-    background-size:cover ;
-    text-align: center;
-    padding: 30px 20px;
-     border-radius: 50%;
-         transition: 1s ease;
-
-}
-.circle2:hover{
-    transform: scale(1.04);
-    box-shadow: 0 0 10px #Ffff;
-}
-.about_cercle .circle2{
-    width: 100px;
-    height: 100px;
-    background-image: url(images/cir.png);
-    background-size:cover ;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 50%;
-        transition: 1s ease;
-
-}
-.circle3:hover{
-    transform: scale(1.04);
-    box-shadow: 0 0 10px #f2f1f1;
-}
-.about_cercle .circle3{
-    width: 100px;
-    height: 100px;
-    background-image: url(images/cir.png);
-    background-size:cover ;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 50%;
-        transition: 1s ease;
-
-}
-.about_cercle .circle4{
-    width: 100px;
-    height: 100px;
-    background-image: url(images/cir.png);
-    background-size:cover ;
-    text-align: center;
-    padding: 30px 20px;
-    border-radius: 50%;
-    background-color: #3b3b38;
-    transition: 1s ease;
-}
-
-.about_cercle .circle4:hover{
-    transform: scale(1.04);
-    box-shadow: 0 0 10px #f4f0ee;
-}
-.circle4 img{
-    width: 45px;
-    height: 45px;
-}
 
 /* Project */
 
@@ -601,6 +518,7 @@ header button:hover{
 .card_2:hover::after {
     right: 0;
 }
+
 /* card 3 */
 .card_3 {
     width: 100%;
@@ -630,6 +548,103 @@ header button:hover{
 .card_3:hover::after {
     top: 0;
 }
+/* card 4 */
+.card_4 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-image: url(images/travel1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card_4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/travel2.png);
+    background-size: cover;
+    background-position: center;
+    transition: top 1s ease; 
+}
+
+.card_4:hover::after {
+    top: 0;
+}
+/* card 5 */
+.card_5 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-image: url(images/h1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card_5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/h2.png);
+    background-size: cover;
+    background-position: center;
+    transition: top 1s ease; 
+}
+
+.card_5:hover::after {
+    top: 0;
+}
+/* card 6 */
+.card_6 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-image: url(images/chez1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card_6::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/chez2.png);
+    background-size: cover;
+    background-position: center;
+    transition: top 1s ease; 
+}
+
+.card_6:hover::after {
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 .main_card h3{
     color: #eb9b34;
@@ -793,7 +808,7 @@ header button:hover{
 }
 
 .input:hover {
-  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+  box-shadow: 0 0 0 .15px rgba(135, 207, 235, 0.186);
 }
 
 .input:focus {
