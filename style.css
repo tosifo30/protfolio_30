@@ -131,8 +131,7 @@ header button:hover{
     transform: scale(1.1);
 }
 .hero_section h1{
-
-    font-size: 55px;
+   font-size: 50px;
     font-family: "Oswald", sans-serif;
     
 }
@@ -153,17 +152,22 @@ header button:hover{
     -webkit-text-fill-color: transparent;
 }
 .develpor{
-    width: 40ch;
+    width: 37ch;
+
     background: linear-gradient(45deg,
     #eb9b34,
     #895a07,
     #eb9b34,
     #eb9b34
     ) ;
-    animation: typing 3s alternate;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+     overflow: hidden;           
+    white-space: nowrap;
+    animation: typing  3s  alternate;
+    
 }
 
 .btn{
